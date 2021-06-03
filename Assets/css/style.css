@@ -1,0 +1,26 @@
+﻿body {
+
+}
+.bg-dark {
+    background-color: #1A1B1D !important;
+}
+.section-dark {
+    background-color: #1A1B1D !important;
+}
+.ml-auto {
+    flex-direction: row;
+    margin-left: auto !important;
+    display: flex !important;
+    flex-basis: auto;
+}
+.ml-auto {
+    flex-direction: row;
+    margin-left: auto !important;
+    display: flex !important;
+    flex-basis: auto;
+}
+button.my .btn {
+    margin: 0px 5px;
+    background-color: #865BCE;
+    border-color: #865BCE;
+}

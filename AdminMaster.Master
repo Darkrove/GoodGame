@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="GoodGame.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <!--CSS only -->
+        <link href="Assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="Assets/css/paper-kit.css?v=2.2.0" rel="stylesheet" />
+        <link href="Assets/css/style.css" rel="stylesheet" />
+        <!-- Fonts and icons -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="Assets/fontawesome/css/brands.css" rel="stylesheet" />
+        <link href="Assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+        <!-- JQuery and JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="Assets/js/script.js" type="text/javascript"></script>
+        <style>
+        </style>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #1A1B1D; border-bottom: 2px solid #865BCE" >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="Dashboard.aspx">
+                <img height="40" src="Assets/image/GoodGameLogo.png" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <asp:HyperLink ID="HyperLink1" CssClass="nav-link active-link clickable n1" NavigateUrl="~/Dashboard.aspx" EnableViewState="true" runat="server">Dashboard</asp:HyperLink>
+                </li>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle drop" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false">Payments</a>
+                    <ul class="dropdown-menu dropdown-info" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item my-colour n2" href="#">History</a>
+                      <a class="dropdown-item my-colour n3" href="#">Expense Tracker</a>
+                      <a class="dropdown-item my-colour n4" href="#">Pending Payments</a>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle drop" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false">User</a>
+                    <ul class="dropdown-menu dropdown-info" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item my-colour n5" href="#">Add User</a>
+                      <a class="dropdown-item my-colour n6" href="Viewuserprofile.aspx">User Profile</a>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle drop" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
+                    <ul class="dropdown-menu dropdown-info" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item my-colour n7" href="#">Add Admin</a>
+                      <a class="dropdown-item my-colour n8" href="Viewadminprofile.aspx">Admin Profile</a>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle drop" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false">Product</a>
+                    <ul class="dropdown-menu dropdown-info" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item my-colour n9" href="Addproduct.aspx">Add Product</a>
+                      <a class="dropdown-item my-colour n10" href="Viewproduct.aspx">View Product</a>
+                    </ul>
+                </div>
+                  <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle drop" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false">Order</a>
+                    <ul class="dropdown-menu dropdown-info" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item my-colour n11" href="Addproduct.aspx">Pending Order</a>
+                      <a class="dropdown-item my-colour n12" href="Viewproduct.aspx">Done Order</a>
+                    </ul>
+                </div>
+              </ul>
+              <div class="ml-auto">
+                <!-- <input class="form-control me-2" style="width:300px;" type="search" placeholder="Search" aria-label="Search"> 
+                <button class="my btn btn-outline-default btn-round" style="margin: 0px 5px;" type="submit">Sign in</button> 
+                <button class="my btn btn-default btn-round" style="margin: 0px 5px;" type="submit">Sign up</button> -->
+                  <asp:HyperLink ID="UserName" CssClass="nav-link clickable" NavigateUrl="~/Signin.aspx" runat="server">
+                    <img id="UserProfile" src="" height="40" style="margin:0 15px 0 10px" class="img-circle img-no-padding img-responsive" alt="Rounded Image" runat="server" onerror="this.src='Assets/image/notfound.png'">
+                </asp:HyperLink>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <footer class="footer footer-black  footer-white " style="background-color: #1A1B1D; border-top: 2px solid #865BCE">
+      <div class="container">
+        <div class="row">
+          <nav class="footer-nav">
+            <ul>
+              <li>
+                <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" title="Linkedin"<i class="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="credits ml-auto">
+            <span class="copyright" style="color: #fff;">
+              ©
+              <script>
+                  document.write(new Date().getFullYear())
+              </script>, made with <i class="fa fa-heart heart"></i> by Good Game
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
